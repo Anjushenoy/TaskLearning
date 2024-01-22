@@ -43,7 +43,6 @@ const SignInScreen = ({route, navigation}: SignInProps) => {
       const matchedUser = users.find((user: User) => user.email === data.email);
       if (matchedUser) {
         if (matchedUser.password === data.password) {
-          // dispatch({type: 'SET_LOGIN', payload: matchedUser});
           dispatch(login(matchedUser));
           return navigation.navigate('HomeScreen');
         } else {
